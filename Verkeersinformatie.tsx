@@ -35,8 +35,8 @@ class Verkeersinformatie extends React.Component {
         segments.roadworks.map((key, index) => (
           <tr key={key.id}>          
             <td>{key.road}</td>
-            <td>{segments.start} => {segments.end}</td>      
-            <td>{key.from} => {key.to}</td>
+            <td>{segments.start + " =>"} {segments.end}</td>      
+            <td>{key.from + " =>"} {key.to}</td>
             <td>{key.reason}</td>
           </tr>
         ))
