@@ -30,9 +30,9 @@ class Verkeersinformatie extends React.Component {
   }
 
   renderTableData() {
-    return this.state.verkeersinformatie.map(verkeersinformatie => {
+    this.state.verkeersinformatie.map(verkeersinformatie => {
       verkeersinformatie.segments.map(segments => {
-        segments.jams.map((key, index) => {
+        return segments.jams.map((key, index) => {
           let { id, events, road, from, delay, distance, fromLoc, start } = key; //destructuring
           console.log(key);
           return (
@@ -51,32 +51,12 @@ class Verkeersinformatie extends React.Component {
     });
   }
 
-  renderTableData1() {
-    return this.state.verkeersinformatie.map((student, index) => {
-      const { id, start, stop, email } = student; //destructuring
-      return (
-        <tr key={id}>
-          <td>{start}</td>
-          <td>{stop}</td>
-          <td>{email}</td>
-        </tr>
-      );
-    });
-  }
-
   renderTableHeader() {
-    let verkeersTabelHeader;
-    this.state.verkeersinformatie.map(verkeersinformatie => {
-      verkeersinformatie.segments.map(segments => {
-        verkeersTabelHeader = segments.jams.map(jams => {
-          let header = Object.keys(jams);
-          return header.map((key, index) => {
-            return <th key={index}>{key.toUpperCase()}</th>;
-          });
-        });
-      });
-    });
-    return verkeersTabelHeader;
+    return (
+      <tr>
+        <th>start</th>
+      </tr>
+    );
   }
 
   render() {
@@ -85,7 +65,7 @@ class Verkeersinformatie extends React.Component {
         <h1 id="title">Actuele verkeersinformatie Radars</h1>
         <table id="verkeersinformatie">
           <tbody>
-            <tr />
+            {this.renderTableHeader()}
             {this.renderTableData()}
           </tbody>
         </table>
