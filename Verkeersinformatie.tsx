@@ -37,7 +37,7 @@ class Verkeersinformatie extends React.Component {
           console.log(key);
           return (
             <tr key={id}>
-              <td>{}</td>
+              <td>{road}</td>
               <td>{from}</td>
               <td>{delay / 60 + " minuten"}</td>
               <td>{distance / 1000 + " km"}</td>
