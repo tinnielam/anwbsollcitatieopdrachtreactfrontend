@@ -1,13 +1,13 @@
 #title {
   text-align: center;
-  font-family: arial, sans-serif;
+  font-family: sans-serif;
 }
 
 #verkeersinformatie {
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  border: 3px solid #ddd;
+  border: 1px solid #ddd;
   width: 100%;
 }
 
@@ -24,6 +24,20 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #4CAF50;
+  background-color: #4e4e4e;
   color: white;
+}
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }

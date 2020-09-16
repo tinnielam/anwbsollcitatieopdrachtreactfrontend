@@ -31,10 +31,11 @@ class Verkeersinformatie extends React.Component {
 
   renderTableData() {
     return this.state.verkeersinformatie.map(verkeersinformatie =>
-      verkeersinformatie.segments.map(segments =>
+      verkeersinformatie.segments.map(segments =>      
         segments.roadworks.map((key, index) => (
-          <tr key={key.id}>
+          <tr key={key.id}>          
             <td>{key.road}</td>
+            <td>{segments.start} => {segments.end}</td>      
             <td>{key.from} => {key.to}</td>
             <td>{key.reason}</td>
           </tr>
@@ -47,6 +48,7 @@ class Verkeersinformatie extends React.Component {
     return (
       <tr>
         <th>Rijksweg</th>
+        <th>Traject</th>
         <th>Route</th>
         <th>Reden</th>
       </tr>
