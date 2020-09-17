@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
+import Marker from './GoogleMarker';
 
-const AnyReactComponent = ({text}: any) => <div>{text}</div>;
 
 const SimpleMap = (props: any) => {
     const [center, setCenter] = useState({lat: 11.0168, lng: 76.9558 });
@@ -13,10 +13,11 @@ const SimpleMap = (props: any) => {
           defaultCenter={center}
           defaultZoom={zoom}
         >
-          <AnyReactComponent
+          <Marker
             lat={11.0168}
             lng={76.9558}
-            text="My Marker"
+            name="My Marker"
+            color="blue"
           />
         </GoogleMapReact>
       </div>
@@ -24,3 +25,6 @@ const SimpleMap = (props: any) => {
 }
 
 export default SimpleMap;
+
+
+
