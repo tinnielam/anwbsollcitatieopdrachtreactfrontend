@@ -11,7 +11,7 @@ class Verkeersinformatie extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://anwbtinlam.tinlam.repl.co/verkeersinformatie")
+    fetch("https://anwbtinlam.tinlam.repl.co/verkeersinformatiejams")
       .then(res => res.json())
       .then(
         result => {
