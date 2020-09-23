@@ -10,7 +10,7 @@ class VerkeersinformatieJams extends React.Component {
     };
   }
 
-  componentDidMount() {
+  public componentDidMount() {
     fetch("https://anwbtinlam.tinlam.repl.co/verkeersinformatiejams")
       .then(res => res.json())
       .then(
@@ -29,7 +29,7 @@ class VerkeersinformatieJams extends React.Component {
       );
   }
 
-  renderTableData(): JSX.Element {
+  private renderTableData(): JSX.Element {
     return this.state.verkeersinformatie.map(verkeersinformatie =>
       verkeersinformatie.segments.map(segments =>
         segments.jams.map((key, index) => (
@@ -50,7 +50,7 @@ class VerkeersinformatieJams extends React.Component {
     );
   }
 
-  renderTableHeader(): JSX.Element {
+  private renderTableHeader(): JSX.Element {
     return (
       <tr>
         <th>Rijksweg</th>
@@ -63,7 +63,7 @@ class VerkeersinformatieJams extends React.Component {
     );
   }
 
-  render(): JSX.Element {
+  public render(): JSX.Element {
     return (
       <div>
         <h1 id="title">Actuele Files</h1>

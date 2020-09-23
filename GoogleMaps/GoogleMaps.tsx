@@ -17,7 +17,7 @@ const SimpleMap = (props: any) => {
             lat={11.0168}
             lng={76.9558}
             name="My Marker"
-            color="blue"
+            color="red"
           />
         </GoogleMapReact>
       </div>
