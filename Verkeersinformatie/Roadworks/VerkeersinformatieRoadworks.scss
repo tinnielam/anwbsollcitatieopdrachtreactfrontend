@@ -1,0 +1,43 @@
+#title {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#verkeersinformatieRoadworks{
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+#verkeersinformatieRoadworks td, #verkeersinformatieRoadworks th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#verkeersinformatieRoadworks tr:nth-child(even){background-color: #f2f2f2;}
+
+#verkeersinformatieRoadworks tr:hover {background-color: #ddd;}
+
+#verkeersinformatieRoadworks th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4e4e4e;
+  color: white;
+}
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
