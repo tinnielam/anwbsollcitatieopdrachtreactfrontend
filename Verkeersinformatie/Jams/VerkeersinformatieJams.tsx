@@ -1,5 +1,4 @@
 import React from "react";
-import Data from "../../AnwbData/AnwbData";
 
 class VerkeersinformatieJams extends React.Component {
   constructor(props: any) {
@@ -30,24 +29,25 @@ class VerkeersinformatieJams extends React.Component {
       );
   }
 
-  private getFilteredJamsData() {
+  private renderTableData(): JSX.Element {
     return this.state.verkeersinformatie.map(verkeersinformatie =>
-      verkeersinformatie.segments.map(segments => segments)
+      verkeersinformatie.segments.map(segments =>
+        segments.jams.map((key, index) => (
+          <tr key={key.id}>
+            <td>{key.road}</td>
+            <td>
+              {segments.start + " =>"} {segments.end}
+            </td>
+            <td>
+              {key.from + " =>"} {key.to}
+            </td>
+            <td>{key.reason}</td>
+            <td>{key.distance / 1000 + " KM"}</td>
+            <td>{key.delay / 60}</td>
+          </tr>
+        ))
+      )
     );
-  }
-
-  private renderTableData() {
-    this.getFilteredJamsData().map((key, index) => (
-      <tr key={key.id}>
-        <td>{key.road}</td>
-        <td>
-          {key.from + " =>"} {key.to}
-        </td>
-        <td>{key.reason}</td>
-        <td>{key.distance / 1000 + " KM"}</td>
-        <td>{key.delay / 60}</td>
-      </tr>
-    ));
   }
 
   private renderTableHeader(): JSX.Element {

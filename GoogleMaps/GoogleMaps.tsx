@@ -3,9 +3,9 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './GoogleMarker';
 
 
-const SimpleMap = (props: any) => {
-    const [center, setCenter] = useState({lat: 11.0168, lng: 76.9558 });
-    const [zoom, setZoom] = useState(11);
+const GoogleMaps = (props: any) => {
+    const [center, setCenter] = useState({lat: 52.066000, lng: 5.200414 });
+    const [zoom, setZoom] = useState(8);
     return (
         <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
@@ -24,7 +24,7 @@ const SimpleMap = (props: any) => {
     );
 }
 
-export default SimpleMap;
+export default GoogleMaps;
 
 
 
