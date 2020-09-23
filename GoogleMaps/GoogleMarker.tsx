@@ -1,5 +1,5 @@
 import React from 'react';
-import './GoogleMaps/marker.scss';
+import './marker.scss';
 
 const Marker = (props: any) => {
     const { color, name, id } = props;

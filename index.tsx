@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import "./Verkeersinformatie/VerkeersinformatieJams.css";
-import Jams from './Verkeersinformatie/VerkeersinformatieJams';
+import "./Verkeersinformatie/Jams/VerkeersinformatieJams.scss";
+import Jams from './Verkeersinformatie/Jams/VerkeersinformatieJams';
 import Map from './GoogleMaps/GoogleMaps';
 
 
