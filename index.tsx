@@ -11,7 +11,7 @@ import Map from './GoogleMaps/GoogleMaps';
 
 
 render(<Map />, document.getElementById("map"));
-render(<Jams />, document.getElementById("root"));
-render(<Roadworks />, document.getElementById("root"));
-render(<Radars />, document.getElementById("root"));
+render(<Jams />, document.getElementById("Jams"));
+render(<Roadworks />, document.getElementById("Roadworks"));
+render(<Radars />, document.getElementById("Radars"));
 

@@ -66,7 +66,7 @@ class VerkeersinformatieRoadworks extends React.Component {
   render(): JSX.Element {
     return (
       <div>
-        <h1 id="title">Actuele verkeersinformatie</h1>
+        <h1 id="title">Actuele Wegwerkzaamheden</h1>
         <table id="verkeersinformatieRoadworks">
           <tbody>
             {this.renderTableHeader()}
