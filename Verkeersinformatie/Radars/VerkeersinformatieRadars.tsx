@@ -1,7 +1,7 @@
 import React from "react";
 
 class VerkeersinformatieRadars extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = {
       error: null,
