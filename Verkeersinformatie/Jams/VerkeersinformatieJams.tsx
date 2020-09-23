@@ -29,7 +29,7 @@ class VerkeersinformatieJams extends React.Component {
       );
   }
 
-  private renderTableData(): JSX.Element {
+  private renderTableDataJams(): JSX.Element {
     return this.state.verkeersinformatie.map(verkeersinformatie =>
       verkeersinformatie.segments.map(segments =>
         segments.jams.map((key, index) => (
@@ -50,7 +50,7 @@ class VerkeersinformatieJams extends React.Component {
     );
   }
 
-  private renderTableHeader(): JSX.Element {
+  private renderTableHeaderJams(): JSX.Element {
     return (
       <tr>
         <th>Rijksweg</th>
@@ -69,8 +69,8 @@ class VerkeersinformatieJams extends React.Component {
         <h1 id="title">Actuele Files</h1>
         <table id="verkeersinformatie">
           <tbody>
-            {this.renderTableHeader()}
-            {this.renderTableData()}
+            {this.renderTableHeaderJams()}
+            {this.renderTableDataJams()}
           </tbody>
         </table>
       </div>

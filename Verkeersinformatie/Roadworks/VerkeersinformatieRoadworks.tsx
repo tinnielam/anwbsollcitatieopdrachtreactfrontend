@@ -29,7 +29,7 @@ class VerkeersinformatieRoadworks extends React.Component {
       );
   }
 
-  private renderTableData(): JSX.Element {
+  private renderTableDataRoadworks(): JSX.Element {
     return this.state.verkeersinformatie.map(verkeersinformatie =>
       verkeersinformatie.segments.map(segments =>
         segments.roadworks.map((key, index) => (
@@ -50,7 +50,7 @@ class VerkeersinformatieRoadworks extends React.Component {
     );
   }
 
-  private renderTableHeader(): JSX.Element {
+  private renderTableHeaderRoadworks(): JSX.Element {
     return (
       <tr>
         <th>Rijksweg</th>
@@ -69,8 +69,8 @@ class VerkeersinformatieRoadworks extends React.Component {
         <h1 id="title">Actuele Wegwerkzaamheden</h1>
         <table id="verkeersinformatie">
           <tbody>
-            {this.renderTableHeader()}
-            {this.renderTableData()}
+            {this.renderTableHeaderRoadworks()}
+            {this.renderTableDataRoadworks()}
           </tbody>
         </table>
       </div>

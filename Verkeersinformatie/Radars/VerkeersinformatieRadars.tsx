@@ -29,7 +29,7 @@ class VerkeersinformatieRadars extends React.Component {
       );
   }
 
-  private renderTableData(): JSX.Element {
+  private renderTableDataRadars(): JSX.Element {
     return this.state.verkeersinformatie.map(verkeersinformatie =>
       verkeersinformatie.segments.map(segments =>
         segments.radars.map((key, index) => (
@@ -50,7 +50,7 @@ class VerkeersinformatieRadars extends React.Component {
     );
   }
 
-  private renderTableHeader(): JSX.Element {
+  private renderTableHeaderRadars(): JSX.Element {
     return (
       <tr>
         <th>Rijksweg</th>
@@ -69,8 +69,8 @@ class VerkeersinformatieRadars extends React.Component {
         <h1 id="title">Actuele Flitsers</h1>
         <table id="verkeersinformatie">
           <tbody>
-            {this.renderTableHeader()}
-            {this.renderTableData()}
+            {this.renderTableHeaderRadars()}
+            {this.renderTableDataRadars()}
           </tbody>
         </table>
       </div>
