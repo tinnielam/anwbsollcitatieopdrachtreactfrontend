@@ -29,16 +29,16 @@ class VerkeersinformatieJams extends React.Component {
       );
   }
 
-  private getData() {
+  private getFilteredJamsData() {
     return this.state.verkeersinformatie.map(verkeersinformatie =>
       verkeersinformatie.segments.map(segments =>
-        segments.jams.map((key, index) => key)
+        segments.jams.map((jams) => jams)
       )
     );
   }
 
   private renderTableData() {
-    console.log(this.getData);
+    console.log(this.getFilteredJamsData());
   }
 
   private renderTableHeader(): JSX.Element {
