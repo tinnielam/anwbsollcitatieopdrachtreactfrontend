@@ -67,7 +67,7 @@ class VerkeersinformatieRadars extends React.Component {
     return (
       <div>
         <h1 id="title">Actuele Flitsers</h1>
-        <table id="verkeersinformatieRadars">
+        <table id="verkeersinformatie">
           <tbody>
             {this.renderTableHeader()}
             {this.renderTableData()}

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import "./Verkeersinformatie/Jams/VerkeersinformatieJams.scss";
-import "./Verkeersinformatie/Radars/VerkeersinformatieRadars.scss";
-import "./Verkeersinformatie/Roadworks/VerkeersinformatieRoadworks.scss";
+import "./Verkeersinformatie/Styles/Verkeersinformatie.scss";
 import Jams from './Verkeersinformatie/Jams/VerkeersinformatieJams';
 import Roadworks from './Verkeersinformatie/Radars/VerkeersinformatieRadars';
 import Radars from './Verkeersinformatie/Roadworks/VerkeersinformatieRoadworks';

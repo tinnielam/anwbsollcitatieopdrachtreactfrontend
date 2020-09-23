@@ -3,7 +3,7 @@
   font-family: sans-serif;
 }
 
-#verkeersinformatieJams {
+#verkeersinformatie {
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -11,16 +11,16 @@
   width: 100%;
 }
 
-#verkeersinformatieJams td, #verkeersinformatie th {
+#verkeersinformatie td, #verkeersinformatie th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#verkeersinformatieJams tr:nth-child(even){background-color: #f2f2f2;}
+#verkeersinformatie tr:nth-child(even){background-color: #f2f2f2;}
 
-#verkeersinformatieJams tr:hover {background-color: #ddd;}
+#verkeersinformatie tr:hover {background-color: #ddd;}
 
-#verkeersinformatieJams th {
+#verkeersinformatie th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
@@ -28,13 +28,10 @@
   color: white;
 }
 
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
 #map {
   height: 100%;
 }
 
-/* Optional: Makes the sample page fill the window. */
 html,
 body {
   height: 100%;

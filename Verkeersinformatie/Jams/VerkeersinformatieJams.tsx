@@ -67,7 +67,7 @@ class VerkeersinformatieJams extends React.Component {
     return (
       <div>
         <h1 id="title">Actuele Files</h1>
-        <table id="verkeersinformatieJams">
+        <table id="verkeersinformatie">
           <tbody>
             {this.renderTableHeader()}
             {this.renderTableData()}
