@@ -1,4 +1,5 @@
 import React from "react";
+import Jams from "./Data/VerkeersinformatieData"
 
 class VerkeersinformatieJams extends React.Component {
   constructor(props: any) {
