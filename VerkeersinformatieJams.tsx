@@ -1,6 +1,6 @@
 import React from "react";
 
-class Verkeersinformatie extends React.Component {
+class VerkeersinformatieJams extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -67,7 +67,7 @@ class Verkeersinformatie extends React.Component {
     return (
       <div>
         <h1 id="title">Actuele verkeersinformatie</h1>
-        <table id="verkeersinformatie">
+        <table id="verkeersinformatieJams">
           <tbody>
             {this.renderTableHeader()}
             {this.renderTableData()}
@@ -78,4 +78,4 @@ class Verkeersinformatie extends React.Component {
   }
 }
 
-export default Verkeersinformatie;
+export default VerkeersinformatieJams;

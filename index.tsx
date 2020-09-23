@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import "./VerkeersinformatieTable.css";
-import Data from './Verkeersinformatie';
+import "./VerkeersinformatieJams.css";
+import Data from './VerkeersinformatieJams';
 import Map from './GoogleMaps';
 
 
