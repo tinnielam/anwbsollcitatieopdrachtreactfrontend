@@ -10,17 +10,14 @@ class VerkeersinformatieJams extends React.Component {
       verkeersinformatie: []
     };
   }
-
-  private renderTableDataJams(): JSX.Element {
+  public componentDidMount() {
     const anwbData = new AnwbData();
     anwbData
       .getAnwbData("jams")
-      .then(verkeersinformatie =>
-        verkeersinformatie.map(data =>
-          this.setState({ verkeersinformatie: data })
-        )
-      );
+      .then(data => this.setState({ verkeersinformatie: data }));
+  }
 
+  private renderTableDataJams(): JSX.Element {
     return this.state.verkeersinformatie.map(verkeersinformatie =>
       verkeersinformatie.segments.map(segments =>
         segments.jams.map((key, index) => (
