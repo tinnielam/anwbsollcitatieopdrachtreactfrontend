@@ -60,13 +60,14 @@ class GoogleMaps extends React.Component {
 
   private renderPolylines(map, maps): any {
 
-    var data = 'sh{bIeth_@eAcCg@kAg@qAc@cAWq@c@kA[}@[}@Wu@W}@GWOk@[gAKWS{@[kA[yASw@CQK[Kk@Ka@?GK_@G_@Ga@CMCOCQKc@CSKi@CUG_@Ga@O_ACOG[Gm@C_@GWC]G[C[CWGc@Gi@C_@Gm@Ce@Ge@Ca@C]Gq@Gk@Gi@Ca@Cg@_@kECc@Gk@CQCYKqAGw@O{A?UWsCCQ?QGk@Gs@CYKqACMCe@CUCWGm@?QOuAGs@?QGa@g@cGCa@KeAQqB?YCQGa@?QGc@Co@KiACQCYKqAOwA?USaCOcBCa@Ks@OkB?QGc@GaAGe@Gs@Gk@?QCYCOCYGs@CYCQCYGy@Ce@Gk@G{@CQGaACUKeAScCGs@CQCY?QCYc@eFGe@C_@OiBGu@Go@KcACk@Gk@CKGo@Cc@QqBOcBUcCSqBEi@MkBEOM{AMyAAYAMCe@Ac@?m@?uA?s@?a@?i@Cg@?]AUEo@CUEg@Cs@[oDKkAEg@AQCYAQGs@IiA[qDEa@e@uF?ECQGs@E_AAG';
+    var encoded_data = 'sh{bIeth_@eAcCg@kAg@qAc@cAWq@c@kA[}@[}@Wu@W}@GWOk@[gAKWS{@[kA[yASw@CQK[Kk@Ka@?GK_@G_@Ga@CMCOCQKc@CSKi@CUG_@Ga@O_ACOG[Gm@C_@GWC]G[C[CWGc@Gi@C_@Gm@Ce@Ge@Ca@C]Gq@Gk@Gi@Ca@Cg@_@kECc@Gk@CQCYKqAGw@O{A?UWsCCQ?QGk@Gs@CYKqACMCe@CUCWGm@?QOuAGs@?QGa@g@cGCa@KeAQqB?YCQGa@?QGc@Co@KiACQCYKqAOwA?USaCOcBCa@Ks@OkB?QGc@GaAGe@Gs@Gk@?QCYCOCYGs@CYCQCYGy@Ce@Gk@G{@CQGaACUKeAScCGs@CQCY?QCYc@eFGe@C_@OiBGu@Go@KcACk@Gk@CKGo@Cc@QqBOcBUcCSqBEi@MkBEOM{AMyAAYAMCe@Ac@?m@?uA?s@?a@?i@Cg@?]AUEo@CUEg@Cs@[oDKkAEg@AQCYAQGs@IiA[qDEa@e@uF?ECQGs@E_AAG';
 
-    var decode = google.maps.geometry.encoding.decodePath(data);
+    var decode = google.maps.geometry.encoding.decodePath(encoded_data);
+
     let geodesicPolyline = new maps.Polyline({
       path: decode,
       geodesic: true,
-      strokeColor: "#00a1e1",
+      strokeColor: "red",
       strokeOpacity: 1.0,
       strokeWeight: 4
     });
@@ -89,6 +90,10 @@ class GoogleMaps extends React.Component {
     );
   }
   static defaultProps = {
+      markers: [
+    {lat: 53.42728, lng: -6.24357},
+    {lat: 43.681583, lng: -79.61146}
+  ],
     center: {
       lat: 52.254709,
       lng: 5.353826
