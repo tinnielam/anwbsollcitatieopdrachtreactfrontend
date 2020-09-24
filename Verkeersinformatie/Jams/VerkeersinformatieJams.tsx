@@ -1,4 +1,5 @@
 import React from "react";
+import AnwbData from "../../Data/AnwbData"
 
 class VerkeersinformatieJams extends React.Component {
   constructor(props: any) {
