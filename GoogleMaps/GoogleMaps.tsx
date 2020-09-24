@@ -8,14 +8,21 @@ class GoogleMaps extends React.Component {
     super(props);
     this.state = {
       error: null,
-      verkeersinformatie: []
+      verkeersinformatie: [],
+      polylinedata: []
     };
   }
+
   public componentDidMount(): void {
     const anwbData = new AnwbData();
     anwbData
       .getAnwbData("jams")
-      .then(data => this.setState({ verkeersinformatie: data }));
+      .then(data => this.setState({ verkeersinformatie: data }))
+      .then(()=> this.state.verkeersinformatie.map(verkeersinformatie =>
+      verkeersinformatie.segments.map(segments =>
+        segments.jams.map((key, index) => (
+          this.setState({ polylinedata: key.polyline }
+         ))))))
   }
 
   private getFromLocation() {
@@ -48,9 +55,15 @@ class GoogleMaps extends React.Component {
     );
   }
 
-    private renderPolylines(map, maps): any {
+  private renderPolylines(map, maps): any {
+
+
+var data ='sh{bIeth_@eAcCg@kAg@qAc@cAWq@c@kA[}@[}@Wu@W}@GWOk@[gAKWS{@[kA[yASw@CQK[Kk@Ka@?GK_@G_@Ga@CMCOCQKc@CSKi@CUG_@Ga@O_ACOG[Gm@C_@GWC]G[C[CWGc@Gi@C_@Gm@Ce@Ge@Ca@C]Gq@Gk@Gi@Ca@Cg@_@kECc@Gk@CQCYKqAGw@O{A?UWsCCQ?QGk@Gs@CYKqACMCe@CUCWGm@?QOuAGs@?QGa@g@cGCa@KeAQqB?YCQGa@?QGc@Co@KiACQCYKqAOwA?USaCOcBCa@Ks@OkB?QGc@GaAGe@Gs@Gk@?QCYCOCYGs@CYCQCYGy@Ce@Gk@G{@CQGaACUKeAScCGs@CQCY?QCYc@eFGe@C_@OiBGu@Go@KcACk@Gk@CKGo@Cc@QqBOcBUcCSqBEi@MkBEOM{AMyAAYAMCe@Ac@?m@?uA?s@?a@?i@Cg@?]AUEo@CUEg@Cs@[oDKkAEg@AQCYAQGs@IiA[qDEa@e@uF?ECQGs@E_AAG'
+    let decode = google.maps.geometry.encoding.decodePath(data);
+
+
     let geodesicPolyline = new maps.Polyline({
-      path: this.props.verkeersinformatie,
+      path: decode,
       geodesic: true,
       strokeColor: "#00a1e1",
       strokeOpacity: 1.0,
