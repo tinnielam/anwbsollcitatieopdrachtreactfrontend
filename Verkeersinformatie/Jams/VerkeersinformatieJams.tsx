@@ -10,7 +10,8 @@ class VerkeersinformatieJams extends React.Component {
       verkeersinformatie: []
     };
   }
-  public componentDidMount() {
+
+  public componentDidMount(): void {
     const anwbData = new AnwbData();
     anwbData
       .getAnwbData("jams")

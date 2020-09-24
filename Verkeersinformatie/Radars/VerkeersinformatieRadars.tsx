@@ -11,7 +11,7 @@ class VerkeersinformatieRadars extends React.Component {
     };
   }
 
-  public componentDidMount() {
+  public componentDidMount(): void {
     const anwbData = new AnwbData();
     anwbData
       .getAnwbData("radars")
