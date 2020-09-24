@@ -1,4 +1,5 @@
 import React from "react";
+import AnwbData from "../../Data/AnwbData";
 
 class VerkeersinformatieRadars extends React.Component {
   constructor(props: any) {
@@ -11,22 +12,10 @@ class VerkeersinformatieRadars extends React.Component {
   }
 
   public componentDidMount() {
-    fetch("https://anwbtinlam.tinlam.repl.co/verkeersinformatieradars")
-      .then(res => res.json())
-      .then(
-        result => {
-          this.setState({
-            isLoaded: true,
-            verkeersinformatie: result
-          });
-        },
-        error => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      );
+    const anwbData = new AnwbData();
+    anwbData
+      .getAnwbData("radars")
+      .then(data => this.setState({ verkeersinformatie: data }));
   }
 
   private renderTableDataRadars(): JSX.Element {
