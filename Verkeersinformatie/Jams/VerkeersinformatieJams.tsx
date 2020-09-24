@@ -1,5 +1,5 @@
 import React from "react";
-import AnwbData from "../../Data/AnwbData"
+import AnwbData from "../../Data/AnwbData";
 
 class VerkeersinformatieJams extends React.Component {
   constructor(props: any) {
@@ -11,26 +11,16 @@ class VerkeersinformatieJams extends React.Component {
     };
   }
 
-  public componentDidMount() {
-    fetch("https://anwbtinlam.tinlam.repl.co/verkeersinformatiejams")
-      .then(res => res.json())
-      .then(
-        result => {
-          this.setState({
-            isLoaded: true,
-            verkeersinformatie: result
-          });
-        },
-        error => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      );
-  }
-
   private renderTableDataJams(): JSX.Element {
+    const anwbData = new AnwbData();
+    anwbData
+      .getAnwbData("jams")
+      .then(verkeersinformatie =>
+        verkeersinformatie.map(data =>
+          this.setState({ verkeersinformatie: data })
+        )
+      );
+
     return this.state.verkeersinformatie.map(verkeersinformatie =>
       verkeersinformatie.segments.map(segments =>
         segments.jams.map((key, index) => (
